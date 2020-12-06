@@ -5,13 +5,17 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Donation from "./pages/Donation";
 import AddLinks from "./pages/AddLinks";
+import AboutUs from "./pages/AboutUs";
+import Programs from "./pages/Programs";
+import ProgramInfo from "./pages/ProgramInfo";
 
 function routes() {
 	return (
 		<Router>
 			<Switch>
-				{/* <Route path="/about" component={About} /> */}
-				{/* <Route exact path="/register" component={RegisterComponent} />; */}
+				<Route path="/about" component={AboutUs} />
+				<Route path="/programs/:image" component={ProgramInfo} />
+				<Route exact path="/programs" component={Programs} />
 				<Route path="/addlinks" component={AddLinks} />
 				<Route path="/donation" component={Donation} />
 				<Route path="/videos" component={VideoPlayer} />

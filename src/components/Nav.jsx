@@ -31,7 +31,7 @@ function Nav() {
 					<NavLink activeClassName="active" to="/videos">
 						<li>Videos</li>
 					</NavLink>
-					<NavLink activeClassName="active" to="/programs">
+					<NavLink exact activeClassName="active" to="/programs">
 						<li>Programs</li>
 					</NavLink>
 					<NavLink activeClassName="active" to="/contact">

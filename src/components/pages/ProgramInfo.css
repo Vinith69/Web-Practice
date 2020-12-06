@@ -1,0 +1,60 @@
+:root {
+	--nav-background: rgb(240, 240, 240);
+	--default-background: rgba(243, 243, 243, 0.856);
+	--high-light: #ff6e40;
+	--section: #f5f0e1;
+	--ocre-yellow: #ffc13b;
+	--black: #1e3d59;
+}
+
+.image {
+	background-color: var(--default-background);
+	font-family: "raleway", sans-serif;
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+	/* min-height: 60vh; */
+	/* max-height: 200vh; */
+	overflow: hidden;
+	height: 1%;
+}
+
+.image > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+	padding: 2rem 0;
+	/* overflow: hidden;
+	height: 1%; */
+}
+
+.image img {
+	max-width: 700px;
+	height: auto;
+	margin: 2rem 0 1rem 0;
+}
+
+.image h5 {
+	font-size: larger;
+	font-style: italic;
+	margin: 1rem 0;
+}
+
+.image p {
+	justify-self: center;
+	align-self: center;
+	font-size: large;
+	font-style: italic;
+	line-height: 1.8rem;
+	text-align: center;
+}
+
+.image span {
+	font-size: medium;
+	font-weight: 600;
+	align-self: flex-end;
+	margin-top: 1rem;
+}

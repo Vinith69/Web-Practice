@@ -36,7 +36,7 @@ function VideoPlayer() {
 			<Nav />
 			<div className="video">
 				{api.map(link => (
-					<React.Fragment key={link.link}>
+					<div key={link.link} className="video-container">
 						<ReactPlayer
 							className="video-player"
 							width={420}
@@ -46,7 +46,7 @@ function VideoPlayer() {
 						/>
 						<h5>{link.title}</h5>
 						<p>{link.description}</p>
-					</React.Fragment>
+					</div>
 				))}
 			</div>
 		</>

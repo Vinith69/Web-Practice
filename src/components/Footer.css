@@ -1,0 +1,61 @@
+:root {
+	--nav-background: rgb(240, 240, 240);
+	--default-background: rgba(243, 243, 243, 0.856);
+	--high-light: #ff6e40;
+	--section: #f5f0e1;
+	--ocre-yellow: #ffc13b;
+	--black: #292f35;
+}
+
+.footer {
+	min-height: 20vh;
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--black);
+	color: white;
+	/* font-family: "roboto", sans-serif; */
+	font-family: "raleway";
+}
+
+.footer > section {
+	display: flex;
+	justify-content: center;
+	padding: 2rem 2rem;
+	border-bottom: 0.1px solid rgba(255, 255, 255, 0.158);
+}
+
+.contact-section {
+	width: 20%;
+	/* text-align: center; */
+	display: flex;
+	flex-direction: column;
+}
+.contact-section h2 {
+	font-weight: 300;
+}
+
+.contact-section .light {
+	font-weight: 100;
+	font-style: italic;
+}
+.contact-section > div {
+	padding: 1rem 0;
+	line-height: 1.8rem;
+	font-weight: 100;
+}
+
+.footer .rights {
+	align-self: center;
+	line-height: 1.8rem;
+	padding-top: 1rem;
+}
+
+.footer .rights .my-link {
+	font-weight: lighter;
+}
+
+.footer .rights .my-link > span {
+	font-weight: 600;
+	font-style: oblique;
+}

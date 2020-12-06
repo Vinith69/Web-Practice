@@ -7,6 +7,7 @@ import "../../App.css";
 import logo from "../../logo.jpg";
 // import logo1 from "../images/p.jpg";
 import { NavLink } from "react-router-dom";
+import Footer from "../Footer";
 
 function Home() {
 	const slideImages = ["deadpool.jpg", "p.jpg", "1606272411396_untitled.png"];
@@ -46,14 +47,15 @@ function Home() {
 				<img src={logo} className="about-logo" />
 			</section>
 			{/* Programs section */}
-			<section className="about-section">
+			{/* <section className="programs-section">
 				<div className="about">
 					<h2>
 						<span>About </span>
 						<span className="about-title">Programs</span>
 					</h2>
 				</div>
-			</section>
+			</section> */}
+			<Footer />
 		</div>
 	);
 }
