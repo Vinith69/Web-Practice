@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d55cb3d.chunk.css",
-    "main.js": "/static/js/main.0f9c9b55.chunk.js",
-    "main.js.map": "/static/js/main.0f9c9b55.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.cf027830.js",
-    "runtime-main.js.map": "/static/js/runtime-main.cf027830.js.map",
-    "static/js/2.ab92b1b2.chunk.js": "/static/js/2.ab92b1b2.chunk.js",
-    "static/js/2.ab92b1b2.chunk.js.map": "/static/js/2.ab92b1b2.chunk.js.map",
-    "static/js/3.7eeaa1bb.chunk.js": "/static/js/3.7eeaa1bb.chunk.js",
-    "static/js/3.7eeaa1bb.chunk.js.map": "/static/js/3.7eeaa1bb.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.7d55cb3d.chunk.css.map": "/static/css/main.7d55cb3d.chunk.css.map",
-    "static/js/2.ab92b1b2.chunk.js.LICENSE.txt": "/static/js/2.ab92b1b2.chunk.js.LICENSE.txt",
-    "static/media/logo.8054cf09.jpg": "/static/media/logo.8054cf09.jpg",
-    "static/media/App.css": "/static/media/pattern2.1ccff13f.jpg"
+    "main.css": "/Web-Practice/static/css/main.23fd9c67.chunk.css",
+    "main.js": "/Web-Practice/static/js/main.0f9c9b55.chunk.js",
+    "main.js.map": "/Web-Practice/static/js/main.0f9c9b55.chunk.js.map",
+    "runtime-main.js": "/Web-Practice/static/js/runtime-main.128f5f73.js",
+    "runtime-main.js.map": "/Web-Practice/static/js/runtime-main.128f5f73.js.map",
+    "static/js/2.ab92b1b2.chunk.js": "/Web-Practice/static/js/2.ab92b1b2.chunk.js",
+    "static/js/2.ab92b1b2.chunk.js.map": "/Web-Practice/static/js/2.ab92b1b2.chunk.js.map",
+    "static/js/3.7eeaa1bb.chunk.js": "/Web-Practice/static/js/3.7eeaa1bb.chunk.js",
+    "static/js/3.7eeaa1bb.chunk.js.map": "/Web-Practice/static/js/3.7eeaa1bb.chunk.js.map",
+    "index.html": "/Web-Practice/index.html",
+    "static/css/main.23fd9c67.chunk.css.map": "/Web-Practice/static/css/main.23fd9c67.chunk.css.map",
+    "static/js/2.ab92b1b2.chunk.js.LICENSE.txt": "/Web-Practice/static/js/2.ab92b1b2.chunk.js.LICENSE.txt",
+    "static/media/logo.8054cf09.jpg": "/Web-Practice/static/media/logo.8054cf09.jpg",
+    "static/media/App.css": "/Web-Practice/static/media/pattern2.1ccff13f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cf027830.js",
+    "static/js/runtime-main.128f5f73.js",
     "static/js/2.ab92b1b2.chunk.js",
-    "static/css/main.7d55cb3d.chunk.css",
+    "static/css/main.23fd9c67.chunk.css",
     "static/js/main.0f9c9b55.chunk.js"
   ]
 }
