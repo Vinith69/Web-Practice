@@ -1,0 +1,29 @@
+.addImage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: max-content;
+}
+
+.addImage .description,
+.addImage input {
+	padding: 1rem;
+	margin: 1rem;
+	outline: none;
+}
+
+.addImage input {
+	width: 30rem;
+}
+
+.addImage .description {
+	width: 30rem;
+	height: 40rem;
+}
+
+.addImage button {
+	padding: 1rem 10rem;
+	margin-bottom: 1rem;
+	font-size: large;
+}

@@ -1,0 +1,36 @@
+.test {
+	background-color: black;
+}
+
+.alice-carousel__dots {
+	position: relative;
+	bottom: 5rem;
+	z-index: 2;
+}
+
+.sliderimg {
+	width: 100%;
+	height: 700px;
+	object-fit: contain;
+}
+
+@media only screen and (max-width: 1500px) {
+	.sliderimg {
+		height: 500px;
+		object-fit: contain;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.alice-carousel__wrapper {
+		height: 20vh;
+	}
+	.sliderimg {
+		height: 200px;
+		object-fit: contain;
+	}
+
+	.alice-carousel__dots {
+		display: none;
+	}
+}
