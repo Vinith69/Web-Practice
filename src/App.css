@@ -12,22 +12,70 @@
 	--section: #f5f0e1;
 	--ocre-yellow: #ffc13b;
 	--black: #1e3d59;
+	--navbar: #253439;
 }
 
 /** ---------------------------------------------------------------------- */
 /* Nav BAr start */
 
 .nav-bar {
-	padding: 2rem;
+	width: 100%;
+	position: absolute;
+	padding: 2rem 2rem 1rem 2rem;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--nav-background);
+	/* background-color: var(--black); */
+	color: #fff;
+	transition: all 0.5s ease-in-out;
+	background-color: transparent;
+	z-index: 2;
+
+	/* background-color: rgb(245, 245, 245); */
+	/* background-color: var(--nav-background); */
+	/* background-color: var(--high-light); */
 	font-family: "Roboto", sans-serif;
+	/* border-bottom: 2px solid var(--high-light); */
+}
+
+.add {
+	position: relative;
+	/* background-color: var(--black); */
+	/* opacity: 0.9; */
+	background-color: var(--navbar);
+	/* background-color: #d6c48f; */
+	z-index: 2;
+}
+
+.sticky {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	/* background-color: var(--black); */
+	background-color: var(--navbar);
+	opacity: 0.9;
+	z-index: 3;
+}
+
+.nav-bar a {
+	opacity: 1;
+	text-decoration: none;
+}
+
+.nav-bar h1 {
+	font-weight: 400;
+}
+
+.nav-bar h1 span {
+	color: var(--high-light);
+	/* font-style: italic; */
+	font-weight: bold;
 }
 
 a {
-	color: #222;
+	/* color: #222; */
+	color: #fff;
 	opacity: 0.65;
 	transition: all 0.6s;
 	font-size: 1.1rem;
@@ -64,7 +112,10 @@ nav ul a {
 nav ul a.active {
 	position: relative;
 	/* color: rgb(231, 137, 13); */
-	color: rgb(255, 149, 10);
+	/* color: rgb(255, 149, 10); */
+
+	/* color: var(--black); */
+	color: #fff;
 	opacity: 1;
 	font-weight: 500;
 
@@ -74,14 +125,27 @@ nav ul a.active {
 nav ul a.active::after {
 	content: "";
 	position: absolute;
-	bottom: -10px;
+	bottom: -12px;
 	width: 100%;
 	height: 2.2px;
-	background-color: rgb(0, 0, 0);
+	/* background-color: rgb(0, 0, 0); */
+	background-color: var(--high-light);
 }
 
 nav ul a.active:hover {
 	opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {
+	nav ul a {
+		/* color: #222; */
+		color: white;
+	}
+
+	.fa-bars::before {
+		/* color: #222; */
+		color: white;
+	}
 }
 
 /** button start **/
@@ -89,14 +153,15 @@ nav ul a.active:hover {
 	background-color: transparent;
 	opacity: 1;
 	padding: 8px 20px;
-	border: 1px solid black;
+	border: 1px solid white;
 	transition: all 0.2s ease-out;
 	text-decoration: none;
 }
 
 .btn:hover {
-	background-color: #222;
-	color: #fff;
+	/* background-color: #222;
+	color: #fff; */
+	background-color: var(--high-light);
 }
 
 .btn li {
@@ -104,29 +169,54 @@ nav ul a.active:hover {
 }
 
 .btn.active {
-	background-color: #222;
-	color: rgb(231, 137, 13);
+	/* background-color: #222;
+	color: rgb(231, 137, 13); */
+	background-color: var(--high-light);
+	color: var(--black);
 	font-weight: 700;
 	opacity: 1;
+	border: none;
 }
 
 /** button end **/
 
 /* Screen 600px */
 @media only screen and (max-width: 600px) {
+	.nav-bar h1 {
+		padding-left: 1rem;
+		font-size: 1.9rem;
+	}
+
+	.nav-logo,
+	.nav-logo h1 {
+		max-width: 70px;
+	}
+
 	.nav-bar {
-		padding: 0px;
+		opacity: 1;
+		padding: 0.8rem 0;
 		height: auto;
 		min-height: 50px;
 		display: block;
-		position: relative;
+		/* position: relative; */
+		/* background-color: var(--black); */
+		background-color: var(--navbar);
+	}
+
+	nav ul a.active::after {
+		bottom: 0px;
 	}
 
 	.fa-bars {
+		color: white;
 		display: inline-block;
 		position: absolute;
-		top: 10px;
-		right: 10px;
+		/* top: 10px; */
+		/* right: 10px; */
+
+		font-size: 1.8rem;
+		top: 20px;
+		right: 20px;
 		cursor: pointer;
 	}
 
@@ -159,7 +249,8 @@ nav ul a.active:hover {
 	.btn.is-expanded {
 		display: flex;
 		text-align: center;
-		background-color: rgb(231, 137, 13);
+		/* background-color: rgb(231, 137, 13); */
+		background-color: var(--high-light);
 		color: white;
 		opacity: 1;
 		border: none;
@@ -167,7 +258,8 @@ nav ul a.active:hover {
 
 	.btn.is-expanded:hover {
 		background-color: white;
-		color: rgb(231, 137, 13);
+		/* color: rgb(231, 137, 13); */
+		color: var(--high-light);
 	}
 }
 
@@ -181,28 +273,60 @@ nav ul a.active:hover {
 
 .image-slider {
 	/* width: 100%; */
-	height: 60vh;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #222;
-	/* background-color: var(--section); */
+	/* background-color: #222; */
+	background-color: var(--section);
+}
+
+.image-slider h1 {
+	position: absolute;
+	z-index: 1;
+	font-size: 6rem;
+}
+
+.image-slider h1 span {
+	color: var(--high-light);
 }
 
 .image-slider img {
 	/* background-size: cover; */
-	max-width: 100%;
-	height: 90%;
+	/* max-width: 100%; */
+	height: 100%;
+	width: 100%;
+	opacity: 0.75;
+	object-fit: cover;
 }
 
 .about-section {
 	display: flex;
 	/* background: url("./components/image/patten-flower.jpg") repeat-x top;
 	background-size: 1.5%; */
-	background: url("./components/image/pattern2.jpg") no-repeat top;
-	background-size: 100% 5%;
-	background-color: #f5f0e1;
-	/* height: 40vh; */
+	/* background: url("./components/image/pattern2.jpg") no-repeat top;
+	background-size: 100% 5%; */
+	/* background-color: var(--section); */
+
+	/* background: url("./components/image/orange swigly.png") repeat-x; */
+	/* background-position: 100px 2.5rem;
+	background-size: 8% 5%; */
+
+	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+		repeat-x;
+
+	/* background: url("banner1.png") repeat-x; */
+	/* background-size: 11rem; */
+	background-position: 0px 2.5rem;
+	/*! changes */
+	/* background-color: var(--black); */
+	color: #fff;
+	/*! changes */
+
+	/* background-color: rgb(255, 255, 255); */
+	background-color: #fbfdf2;
+	color: #222;
+	height: 75vh;
 	padding: 4rem 2rem 4rem 0;
 	justify-content: center;
 }
@@ -210,11 +334,15 @@ nav ul a.active:hover {
 .about-section > .about {
 	display: flex;
 	flex-direction: column;
-	width: 30%;
+	justify-content: center;
+	width: 40%;
 	height: 100%;
 	align-items: flex-start;
+	margin: 0 15rem 0 0;
 }
+
 .about-title,
+.programs-title,
 .about a {
 	/* color: red; */
 	color: #ff6e40;
@@ -223,46 +351,86 @@ nav ul a.active:hover {
 
 .about > h2 {
 	padding: 2rem 0 0 0;
+	font-size: 2rem;
 }
 .about > h4 {
-	padding: 0 0 1rem 0;
-	font-size: small;
+	padding: 1rem 0 1rem 0;
+	font-size: medium;
 	font-weight: 450;
 }
 
 .about > p {
-	padding: 0 0 1rem 0;
-	line-height: 1.5rem;
+	padding: 0 0 2rem 0;
+	font-size: larger;
+	/* line-height: 1.8rem; */
+	line-height: 2.5rem;
 }
 
 .about-logo {
 	align-self: center;
-	margin-left: 50px;
+	/* margin-left: 50px; */
 	width: auto;
-	max-height: 20rem;
+	max-height: 24rem;
 }
 
 @media only screen and (max-width: 1200px) {
+	.about-section {
+		height: min-content;
+	}
+
 	.about-section > .about {
 		width: 50%;
+		margin-right: 2rem;
 	}
 
 	.about-logo {
 		/* align-self: center; */
 		width: 30%;
-		margin-left: 30px;
+		/* orginal */
+		/* margin-left: 30px; */
+
+		/* margin-left: 2rem; */
 	}
 }
 
 @media only screen and (max-width: 600px) {
+	.about > h2 {
+		padding: 2rem 0 0 0;
+		font-size: 1.5rem;
+	}
+
+	.about > p {
+		font-size: larger;
+		line-height: 1.8rem;
+	}
+
+	.image-slider h1 {
+		font-size: 2rem;
+	}
+
 	.about-section {
 		flex-direction: column;
-		/* justify-content: center; */
+		justify-content: center;
 		align-items: center;
 		width: 100vw;
+		height: auto;
+		padding-right: 0;
 	}
+
 	.about-section > .about {
-		width: 70%;
+		/* width: 70%; */
+		width: 100%;
+		margin: 0;
+		padding: 1rem;
+	}
+
+	.about-logo {
+		margin-left: 0;
+		/* align-self: center; */
+		/* margin-top: 50px; */
+
+		width: auto;
+		max-height: 20rem;
 	}
 	.image-slider {
 		/* width: 100%; */
@@ -279,79 +447,279 @@ nav ul a.active:hover {
 		/* max-width: 100%; */
 		max-height: 100%;
 	}
-
-	.about-logo {
-		align-self: center;
-		margin-top: 50px;
-		width: auto;
-		max-height: 20rem;
-	}
 }
 
 /*! Programs Section */
 .programs-section {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	/* background: url("./components/image/patten-flower.jpg") repeat-x top;
 	background-size: 1.5%; */
-	/* height: 40vh; */
-	padding: 4rem 2rem 4rem 0;
+	/* height: 50vh; */
+	/* background: url("./components/image/pattern2.jpg") no-repeat top;
+	background-size: 100% 4%; */
+	padding: 4rem 0rem 0rem 0;
+
+	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/reapeat2.jpg")
+		repeat-x top;
+	background-color: #faab4c;
+
+	background: url("banner3.png") repeat-x;
+	background-size: 15rem;
+	background-color: #e55039;
 	justify-content: center;
+	flex-wrap: wrap;
+	/* background-color: var(--section); */
+}
+
+.programs-section .programs-title {
+	color: var(--ocre-yellow);
+	font-style: normal;
+}
+
+.programs-section > .image-section {
+	margin: 1rem 0;
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.programs-section > .image-section > a {
+	color: #222;
+	height: min-content;
+	margin: 0 2rem;
+	opacity: 1;
+	text-decoration: none;
+}
+/* !Extra */
+.programs-section .image-container {
+	display: flex;
+	flex-direction: column;
+	width: min-content;
+	background-color: #fff;
+	margin: 1.2rem 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	/* border-radius: 0.5rem; */
+	transition: 0.3s;
+	overflow: hidden;
+}
+
+.programs-section .image-container:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	transform: translateY(200px);
+}
+
+.programs-section .image-container > h5 {
+	/* padding: 0.8rem; */
+	padding: 1rem;
+	font-size: 1.4rem;
+	/* background-color: var(--high-light); */
+}
+
+.programs-section .image-container > p {
+	align-self: start;
+	width: 100%;
+	padding: 0 1rem 1rem 1rem;
+}
+
+.programs-section .image-container > span {
+	color: #222;
+	font-weight: 600;
+	align-self: flex-end;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* !Extra */
+@media only screen and (max-width: 500px) {
+	.programs-section .image-container img {
+		width: 100%;
+	}
+	.programs-section .image-container p {
+		font-size: small;
+	}
+	.programs-section .image-container span {
+		font-size: small;
+	}
+
+	.programs-section .image-container {
+		margin: 0;
+		width: 300px;
+		justify-self: center;
+	}
+	.programs-section > .image-section > a {
+		padding: 1rem 0rem;
+		height: 100%;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.programs-section .image-container {
+		width: 270px;
+		margin: 0;
+	}
+	.programs-section .image-section a {
+		margin: 1rem 0;
+		height: 100%;
+	}
 }
 
 /* Home Page end */
 /**____________________________________________________________________________________________ */
 /** Video Page Start**/
+
+.isLoading {
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--section);
+}
+
+.video-title {
+	display: flex;
+	justify-content: center;
+	background-color: var(--section);
+}
+.video-title > h1 {
+	position: relative;
+	margin-bottom: 1rem;
+}
+
+.video-title > h1::after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	color: #222;
+	background-color: var(--high-light);
+}
+
 .video {
-	text-align: center;
+	/* text-align: center; */
 	/* background-color: #282c34; */
-	background-color: var(--default-background);
+	/* background-color: var(--default-background); */
+	background-color: var(--section);
 
 	min-height: 90vh;
-	display: flex;
+	/* !FLEX */
+	/* display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	flex-wrap: wrap; */
+	/* padding: 0 10rem; */
+	/* !FLEX */
+
+	/* !GRID */
+	display: grid;
+	/* grid-gap: 0 100px; */
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	padding: 0 1rem;
+	/* grid-template-rows: auto; */
+	/* !GRID */
+
 	/* font-size: calc(10px + 2vmin); */
 	color: white;
-	flex-wrap: wrap;
 	font-family: "Raleway", sans-serif;
 }
 
-.video-player {
+/* .video-player {
 	padding: 1rem;
-}
+} */
 
 .video p,
 .video h5 {
 	margin: 0.1rem 0 1rem 0;
 	color: #222;
-	text-align: center;
+	/* text-align: center; */
 }
 .video h5 {
-	margin: 0.3rem 0 1.5rem 0;
+	margin: 0.3rem 0 1.5rem 1rem;
 	font-size: large;
+	/* text-align: center; */
 }
 
 .video p {
 	padding: 0 1rem;
+	/* white-space: pre-line; */
+	white-space: pre-wrap;
 }
 
 .video-container {
+	align-self: start;
 	display: flex;
 	flex-direction: column;
 	max-width: 420px;
-	max-height: 450px;
+	/* max-height: 450px; */
 	/* background-color: #626364; */
 	background-color: #fff;
 	padding-bottom: 2rem;
 	margin: 1rem 0;
-	border-radius: 0.4rem;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0.2rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 	transition: 0.3s;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .video-container:hover {
-	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 4px 8px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 1400px) {
+	/* @media only screen and (max-width: 1200px) { */
+	.video {
+		padding: 0;
+		/* !GRID */
+		/* padding: 0 4rem; */
+		/* display: grid; */
+		/* grid-gap: 50px 100px; */
+		/* grid-template-columns: 1fr 1fr;
+		justify-items: center;
+		grid-template-rows: auto; */
+		/* !GRID */
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.video-player {
+		padding: 0rem;
+		margin-top: 1rem;
+	}
+
+	.video-container {
+		margin: 1rem;
+		width: 90%;
+		height: auto;
+		align-items: center;
+		/*!Grid  */
+		width: min-content;
+		/* grid-column: 1 span 2; */
+		/*!Grid  */
+	}
+
+	.video {
+		padding: 0;
+		/* !GRID */
+		display: grid;
+		grid-gap: 20px 0px;
+		/* grid-template-columns: 0.2fr 0.6fr 0.2fr; */
+		grid-template-columns: 1fr;
+		justify-items: center;
+
+		grid-template-rows: auto;
+		/* !GRID */
+	}
 }
 
 @keyframes App-logo-spin {
@@ -370,37 +738,371 @@ nav ul a.active:hover {
 	background-color: #f5f0e1;
 	/* background-color: #000000; */
 }
+.programs .image {
+	/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+	0px 1rem repeat-x,
+url("warli3.png") right 1.5rem no-repeat,
+url("warli5.png") right 30rem no-repeat,
+url("warli1.png") right 60rem no-repeat; */
 
-.programs a {
+	background: url("warlicolor1.png") right 1.5rem no-repeat,
+		url("warlicolor2.png") right 30rem no-repeat,
+		url("warli1.png") right 60rem no-repeat;
+	background-size: 30rem, 30rem, 25rem;
+	background-color: var(--section);
+
+	min-height: max-content;
+	display: flex;
+	/* flex-direction: column; */
+	align-items: flex-start;
+	/* justify-content: space-evenly; */
+	/* font-size: calc(10px + 2vmin); */
+	color: white;
+	flex-wrap: wrap;
+	font-family: "Raleway", sans-serif;
+
+	/* padding: 4rem calc(10% - 2rem); */
+	padding: 2rem calc(10% + 10rem);
+}
+
+.programs > .image > a {
+	color: #222;
+	height: min-content;
+	margin: 0 2rem;
 	opacity: 1;
 	text-decoration: none;
 }
 
-.image-container {
+.programs .image p,
+.programs .image h5 {
+	margin: 0.1rem 0 1rem 0;
+	color: #222;
+	/* text-align: center; */
+}
+.programs .image h5 {
+	margin: 0.3rem 0 1.5rem 1rem;
+	font-size: large;
+	/* text-align: center; */
+}
+
+.programs .image p {
+	padding: 0 1rem;
+	text-align: center;
+	/* white-space: pre-line; */
+	white-space: pre-wrap;
+}
+
+.prgm-title {
+	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+		0px 1rem repeat-x;
+	padding-top: 4rem;
 	display: flex;
-	flex-direction: column;
-	max-width: 420px;
-	/* max-height: 450px; */
-	/* background-color: #626364; */
+	justify-content: center;
+	color: black;
+}
+
+.prgm-title h1 {
+	position: relative;
+	text-decoration: underline var(--high-light);
+}
+
+/* .prgm-title h1::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	bottom: -5px;
+	left: 0;
+	background-color: var(--high-light);
+} */
+
+.image .image-container {
+	display: flex;
+	/*! orginal */
+	/* flex-direction: column; */
+	/* padding-bottom: 1rem; */
+	/* border-radius: 0.4rem; */
+	/*! orginal */
+
+	/* !Extra */
+	width: 1000px;
+	/* !Extra */
+
+	align-items: flex-start;
+	justify-content: center;
+
 	background-color: #fff;
 	/* background-color: var(--ocre-yellow); */
-	padding-bottom: 1rem;
+
 	margin: 1.2rem 0;
-	border-radius: 0.4rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 	transition: 0.3s;
 	overflow: hidden;
 }
+/*! Extra */
+.image .image-container div {
+	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	line-height: 2rem;
+}
+/*! Extra */
 
 .image-container:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.image-container span {
+.image .image-container span {
 	color: #222;
 	font-weight: 600;
-	align-self: flex-end;
-	margin-right: 1rem;
+	align-items: flex-end;
+	margin-left: calc(70% - 20px);
+	/* align-self: flex-end; */
+	/* margin-right: 1rem; */
+}
+
+@media only screen and (max-width: 1500px) {
+	.programs .image {
+		/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+		0px 1rem repeat-x,
+	url("warli3.png") calc(100% + 6rem) 1.5rem no-repeat,
+	url("warli5.png") calc(100% + 6rem) 30rem no-repeat,
+	url("warli1.png") calc(100% + 6rem) 60rem no-repeat; */
+		/* background-size: 5rem, 30rem, 30rem, 25rem; */
+
+		background: url("warlicolor1.png") calc(100% + 3rem) 1.5rem no-repeat,
+			url("warlicolor2.png") calc(100% + 2rem) 30rem no-repeat,
+			url("warli1.png") calc(100% + 6rem) 60rem no-repeat;
+		background-size: 25rem, 25rem, 25rem;
+		background-color: var(--section);
+		padding: 2rem calc(5% + 2rem);
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.programs .image {
+		/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+			0px 1rem repeat-x; */
+
+		background-size: 0rem;
+		padding: 0;
+		padding-top: 2rem;
+		justify-content: space-evenly;
+	}
+
+	.programs .image .image-container {
+		flex-direction: column;
+		padding-bottom: 1rem;
+		width: min-content;
+	}
+
+	.programs .image .image-container div {
+		align-self: center;
+		line-height: 1rem;
+	}
+
+	.image .image-container span {
+		align-self: flex-end;
+		margin-right: 10px;
+		margin-left: 0;
+	}
+
+	.programs .image h5 {
+		align-self: center;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.programs .image .image-container {
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		/* margin: 0; */
+	}
+	.programs .image img {
+		width: 100%;
+	}
+	/* 
+	.programs .image {
+		padding: 0;
+		padding-top: 6rem;
+	} */
 }
 
 /* Programs Page end  */
+/* *------------------------------------------------------------------------------------------------- */
+/* Contacts Page/Donation page start  */
+
+.contactUsPage {
+	/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+	repeat-x 0px 2.5px,
+url("warli3.png") 70rem -1.5rem no-repeat,
+url("warli5.png") 74rem 13rem no-repeat,
+url("warli1.png") 69rem 28rem no-repeat;
+background-size: 5rem, 20rem, 20rem, 25rem; */
+	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+			repeat-x 0px 2.5px,
+		url("warli3.png") calc(100% - 5rem) calc(100% - 30rem) no-repeat,
+		url("warli5.png") calc(100% - 20rem) calc(100% - 15rem) no-repeat,
+		url("warli1.png") calc(100% - 12rem) calc(100% - -3rem) no-repeat;
+	background-size: 5rem, 20rem, 20rem, 25rem;
+	background-color: var(--section);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 80vh;
+}
+
+.donation {
+	margin-top: 3.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.donation > h1 {
+	/* padding: 0 0 2rem 5rem; */
+	padding: 0 0 2rem 0rem;
+	text-decoration: underline var(--high-light) 3px;
+}
+
+.donation > div {
+	width: 50vw;
+	line-height: 2.2rem;
+	/* padding-left: 5rem; */
+}
+
+.contactUsPageSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 3.5rem;
+}
+
+.contactUsPageSection > h1 {
+	/* padding: 0 0 2rem 5rem; */
+	padding: 0 0 2rem 0rem;
+	margin-top: 2rem;
+	text-decoration: underline var(--high-light) 3px;
+}
+
+.contactUsPageSection > div {
+	display: flex;
+	flex-direction: column;
+	width: 50vw;
+	line-height: 1.5rem;
+	/* padding-left: 5rem; */
+	/* align-items: center; */
+	justify-content: center;
+}
+
+@media only screen and (max-width: 1300px) {
+	.contactUsPage {
+		background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+			repeat-x 0px 2.5px;
+		background-size: 5rem;
+		background-color: var(--section);
+	}
+
+	.donation > div,
+	.contactUsPageSection > div {
+		width: 80vw;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.donation,
+	.contactUsPageSection {
+		align-items: center;
+	}
+
+	.donation > div,
+	.donation > h1,
+	.contactUsPageSection > div,
+	.contactUsPageSection > h1 {
+		padding-left: 1rem;
+	}
+
+	.donation > h1,
+	.contactUsPageSection > h1 {
+		align-self: start;
+		padding-left: 2rem;
+	}
+
+	.donation > div {
+		line-height: 1.8rem;
+		margin-bottom: 2rem;
+		width: 90vw;
+	}
+
+	.contactUsPageSection > h1 {
+		margin-top: 0rem;
+	}
+
+	.contactUsPageSection > div {
+		line-height: 1.4rem;
+		padding-left: 0rem;
+	}
+}
+/* Contacts Page/Donation page end  */
+/* *------------------------------------------------------------------------------------------------- */
+/* Not Found page start  */
+.notFound {
+	height: 100vh;
+	width: 100vw;
+	background: url("https://www.artzstudio.com/wp-content/uploads/2020/05/404-error-not-found-page-lost-1024x788.png")
+		no-repeat;
+	background-position: center -4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+.notFound h1 {
+	margin-bottom: 5rem;
+	text-align: center;
+	color: #74ba02;
+}
+
+.notFound a {
+	padding: 1rem 6rem;
+	margin-bottom: 1rem;
+	opacity: 1;
+	color: white;
+	background-color: #126196;
+	align-self: center;
+	font-size: larger;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.notFound {
+		background-size: contain;
+		background-position: center 4rem;
+	}
+
+	.notFound h1 {
+		font-size: larger;
+		margin-bottom: 5rem;
+	}
+
+	.notFound a {
+		margin-bottom: 6rem;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.notFound h1 {
+		font-size: large;
+		margin-bottom: 3rem;
+	}
+
+	.notFound a {
+		margin-bottom: 5rem;
+	}
+}
+
+/* Not Found page end  */

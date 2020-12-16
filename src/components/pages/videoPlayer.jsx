@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import Nav from "./../Nav";
+import Nav from "../Nav";
+import Footer from "../Footer";
 import Axios from "axios";
+import useWindowDimensions from "../useWindowDimensions";
+import ReactLoading from "react-loading";
 
 function VideoPlayer() {
 	const [api, setApi] = useState([]);
+	const [playerWidth, setPlayerWidth] = useState(420);
+	const [playerHeight, setPlayerHeight] = useState(320);
+	const { height, width } = useWindowDimensions();
+	const [isLoading, setIsLoading] = useState(true);
 	// const api = [
 	// 	{
 	// 		url: "https://www.youtube.com/watch?v=I2UBjN5ER4s",
@@ -22,35 +29,103 @@ function VideoPlayer() {
 	// console.log(api.map((l)));
 	useEffect(() => {
 		const fetchData = () => {
+			setIsLoading(true);
 			const url = `http://localhost:5000/addLinks`;
 			Axios.get(url).then(response => {
 				console.log(response);
 				setApi(response.data);
 			});
+			setTimeout(() => {
+				setIsLoading(false);
+			}, 1500);
 		};
 		fetchData();
-	}, []);
+
+		if (width > 500) {
+			setPlayerWidth(420);
+			setPlayerHeight(320);
+		} else {
+			setPlayerWidth(320);
+			setPlayerHeight(220);
+		}
+	}, [width]);
 
 	return (
 		<>
-			<Nav />
-			<div className="video">
-				{api.map(link => (
-					<div key={link.link} className="video-container">
-						<ReactPlayer
-							className="video-player"
-							width={420}
-							height={320}
-							url={link.link}
-							controls={true}
-						/>
-						<h5>{link.title}</h5>
-						<p>{link.description}</p>
+			<Nav color="add" />
+			{isLoading ? (
+				<div className="isLoading">
+					<ReactLoading type="bars" color="black" />
+				</div>
+			) : (
+				<>
+					<div
+						className="designs"
+						style={{
+							backgroundPosition: "4rem 1rem",
+							padding: "2rem",
+						}}
+					></div>
+					<div className="video-title">
+						<h1>Videos</h1>
 					</div>
-				))}
-			</div>
+					<div className="video">
+						{/* {console.log("api", api)} */}
+						{api.map(link => (
+							<div key={link.link} className="video-container">
+								<ReactPlayer
+									className="video-player"
+									// width={420}
+									// height={320}
+									width={playerWidth}
+									height={playerHeight}
+									url={link.link}
+									controls={true}
+								/>
+
+								<h5>{link.title}</h5>
+								<p>{link.description}</p>
+							</div>
+						))}
+					</div>
+					<div
+						className="designs"
+						style={{
+							backgroundPosition: "4rem 1rem",
+							padding: "2rem",
+						}}
+					></div>
+				</>
+			)}
+			<Footer color="normal" />
 		</>
 	);
 }
 
 export default VideoPlayer;
+
+// {isLoading ? (
+// 	<div className="isLoading">
+// 		<ReactLoading type="bars" color="black" />
+// 	</div>
+// ) : (
+// 	<div className="video">
+// 		<div className="designs"></div>
+// 		{console.log("api", api)}
+// 		{api.map(link => (
+// 			<div key={link.link} className="video-container">
+// 				<ReactPlayer
+// 					className="video-player"
+// 					// width={420}
+// 					// height={320}
+// 					width={playerWidth}
+// 					height={playerHeight}
+// 					url={link.link}
+// 					controls={true}
+// 				/>
+// 				<h5>{link.title}</h5>
+// 				<p>{link.description}</p>
+// 			</div>
+// 		))}
+// 	</div>
+// )}

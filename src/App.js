@@ -1,6 +1,6 @@
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import VideoPlayer from "./components/pages/videoPlayer";
+// import VideoPlayer from "./components/pages/videoPlayer";
 import Routes from "./components/routes";
 // import  {BrowserRouter } from "react-router-dom";
 

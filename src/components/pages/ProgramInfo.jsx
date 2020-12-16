@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import Nav from "./../Nav";
 import Footer from "./../Footer";
 import Axios from "axios";
@@ -8,22 +8,26 @@ import "./ProgramInfo.css";
 function ProgramInfo() {
 	const { image } = useParams();
 	const [api, setApi] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
 	useEffect(() => {
-		const fetchData = () => {
+		const fetchData = async () => {
+			setIsLoading(true);
 			const url = `http://localhost:5000/specificImage`;
-			Axios.get(url, { params: { id: image } }).then(response => {
-				console.log(response);
-				console.log(image);
+			await Axios.get(url, { params: { id: image } }).then(response => {
+				// console.log(response.data);
+				// console.log(image);
 				setApi(response.data);
 			});
+			setIsLoading(false);
 		};
 		fetchData();
 	}, []);
 	return (
 		<div>
-			<Nav />
-			{/* <h1>Program info{image}</h1> */}
-			<div className="image">
+			<Nav color="add" />
+			{!isLoading && !api.length && <Redirect to="/" />}
+			<div className="image-program">
 				<div>
 					{api.map(file => (
 						<React.Fragment key={file.id}>
@@ -40,7 +44,7 @@ function ProgramInfo() {
 					))}
 				</div>
 			</div>
-			<Footer />
+			<Footer color="normal" />
 		</div>
 	);
 }

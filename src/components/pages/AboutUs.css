@@ -1,63 +1,169 @@
 :root {
 	--nav-background: rgb(240, 240, 240);
 	--default-background: rgba(243, 243, 243, 0.856);
+	--high-light: #ff6e40;
+	--section: #f5f0e1;
+	--ocre-yellow: #ffc13b;
+	--black: #1e3d59;
 }
 
 .aboutUs-section {
-	background-color: var(--default-background);
-	padding: 0 5rem;
+	/* background-color: var(--default-background); */
+
+	/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/rangoli1.jpg")
+		repeat-y top left; */
+
+	/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+		repeat-x;
+
+	background-position: 0px 2.5rem; */
+
+	/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+	0px 2.5rem repeat-x,
+url("../../warli6.png") left 3.5rem no-repeat,
+url("../../warli3.png") right 1.5rem no-repeat,
+url("../../warli7.png") left 30rem no-repeat,
+url("../../warli5.png") right 30rem no-repeat,
+url("../../warli2.png") left 56rem no-repeat,
+url("../../warli1.png") right 60rem no-repeat; */
+
+	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+			0px 2.5rem repeat-x,
+		url("../../warli6.png") left 3.5rem no-repeat,
+		url("../../warlicolor1.png") right 1.5rem no-repeat,
+		url("../../warlicolor2.png") left 30rem no-repeat,
+		url("../../warli5.png") right 30rem no-repeat,
+		url("../../warli2.png") left 56rem no-repeat,
+		url("../../warli1.png") right 60rem no-repeat;
+	background-size: 5rem, 26rem, 25rem, 25rem, 30rem, 35rem, 25rem;
+	/* background-position: 0px 2.5rem, right 1.5rem, -4rem 1.5rem, -2rem, right; */
+
+	background-color: var(--section);
+	/* padding: 0 5rem; */
 	font-family: "Raleway", sans-serif;
+	padding: 7rem 0rem 1rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.image {
-	height: 40vh;
-	/* background-color: slategray; */
+.designs {
+	height: 5vh;
+	width: 100%;
+	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+		repeat-x;
+	/* background-position: 0px -1rem; */
+	background-color: var(--section);
 }
+
+/* .image {
+	height: 40vh; 
+	 background-color: slategray;
+} */
 
 .image > img {
 	/* padding-left: 5rem; */
-	width: auto;
-	height: 100%;
+	/* width: auto;
+	height: 100%; */
+	width: 100%;
+	height: auto;
 }
 
 .aboutUs-info {
 	display: flex;
 	flex-direction: column;
+
+	/* !changes */
 	width: 40vw;
+	/* font-family: "Montserrat", sans-serif; */
+	/* !changes */
+	/* width: 70vw; */
+	justify-content: center;
 	align-items: center;
 	line-height: 1.5rem;
 	padding-top: 2rem;
 }
 
+.aboutUs-info > p {
+	margin: 1rem 0rem;
+	line-height: 1.6;
+}
+
+.aboutUs-info > section {
+	align-self: flex-start;
+	padding: 1rem 0;
+}
+
 .aboutUs-info h3 {
-	align-self: start;
-	padding: 1.2rem 0;
+	/* align-self: start; */
+	padding: 0 0 1.2rem 0;
 }
 
 .aboutUs-info ul {
 	padding-left: 3rem;
 }
 
+/* .warli-image {
+	width: 100vw;
+	align-self: start;
+	padding-left: 10rem;
+}
+
+.warli-image img {
+	max-width: 100%;
+	height: auto;
+} */
+
+@media only screen and (max-width: 1500px) {
+	.aboutUs-section {
+		align-items: start;
+		padding-left: 8rem;
+		background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+				0px 2.5rem repeat-x,
+			url("../../warli3.png") right 1.5rem no-repeat,
+			url("../../warli5.png") right 30rem no-repeat,
+			url("../../warli1.png") right 60rem no-repeat;
+		background-size: 5rem, 30rem, 35rem, 25rem;
+		background-color: var(--section);
+	}
+
+	.aboutUs-info {
+		width: 60%;
+	}
+}
+
 @media only screen and (max-width: 1200px) {
 	.aboutUs-section {
 		padding: 0.8rem;
+		background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+			0px 1.5rem repeat-x;
+		background-size: 3rem;
+		background-color: var(--section);
 	}
+
 	/* .aboutUs-info {
 		width: 70vw;
 	} */
-	.image {
-		height: 30vh;
-	}
+
+	/* .image {
+		height: 50vh;
+	} */
 	.image > img {
 		width: 100%;
 		height: 100%;
 	}
 	.aboutUs-info {
 		width: 90vw;
-		text-align: center;
-		padding-top: 1rem;
+		/* text-align: center; */
+		padding-top: 3rem;
+		align-self: center;
 		/* line-height: 1.3rem; */
 	}
+
+	/* .aboutUs-info > p {
+		text-align: center;
+	} */
+
 	.aboutUs-info h3 {
 		align-self: start;
 		padding: 0.2rem 0;

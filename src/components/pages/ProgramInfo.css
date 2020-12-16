@@ -7,7 +7,7 @@
 	--black: #1e3d59;
 }
 
-.image {
+.image-program {
 	background-color: var(--default-background);
 	font-family: "raleway", sans-serif;
 	display: flex;
@@ -20,41 +20,72 @@
 	height: 1%;
 }
 
-.image > div {
+.image-program > div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 700px;
 	padding: 2rem 0;
+
 	/* overflow: hidden;
 	height: 1%; */
 }
 
-.image img {
+.image-program img {
 	max-width: 700px;
 	height: auto;
 	margin: 2rem 0 1rem 0;
 }
 
-.image h5 {
+.image-program h5 {
 	font-size: larger;
-	font-style: italic;
+	/* font-style: italic; */
 	margin: 1rem 0;
 }
 
-.image p {
+.image-program p {
 	justify-self: center;
 	align-self: center;
 	font-size: large;
-	font-style: italic;
+	/* font-style: italic; */
 	line-height: 1.8rem;
-	text-align: center;
+	/* text-align: center; */
+	white-space: pre-wrap;
 }
 
-.image span {
+.image-program span {
 	font-size: medium;
 	font-weight: 600;
 	align-self: flex-end;
 	margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+	.image-program > div {
+		padding: 2rem;
+	}
+
+	.image-program h5 {
+		margin: 0.5rem;
+	}
+	.image-program p {
+		font-size: medium;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.image-program > div img {
+		width: calc(100vw - 1rem);
+	}
+
+	.image-program p {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-height: 1000px) {
+	.image-program {
+		height: calc(40vh + 20rem);
+	}
 }

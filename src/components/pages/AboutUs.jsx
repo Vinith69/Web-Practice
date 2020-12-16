@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "./../Nav";
 import "./AboutUs.css";
 import Footer from "./../Footer";
 
 function AboutUs() {
 	const slideImages = ["deadpool.jpg", "p.jpg", "dp.png"];
+
 	return (
 		<div>
-			<Nav />
+			<Nav color="add" />
 
 			<section className="aboutUs-section">
-				<div className="image">
-					<img src={`/images/${slideImages[2]}`} alt="fuck" />
-				</div>
+				{/* <div className="image">
+					<img
+						src="https://svpudupi.org/wp-content/uploads/2020/09/slide3.jpg"
+						alt=""
+					/> */}
+				{/* <img src={`/images/${slideImages[2]}`} alt="fuck" /> */}
+				{/* </div> */}
 				<div className="aboutUs-info">
+					<div className="image">
+						<img
+							src="https://svpudupi.org/wp-content/uploads/2020/09/slide3.jpg"
+							alt=""
+						/>
+						{/* <img src={`/images/${slideImages[2]}`} alt="fuck" /> */}
+					</div>
+					{/* <div> */}
 					<p>
 						Our trust Samskruthi Vishwa Prathistana Udupi was
 						founded on 16th September 2019. The very purpose behind
@@ -38,57 +51,75 @@ function AboutUs() {
 						which was inaugurated by Padmashri Dr. Salumarada
 						Timmakka.
 					</p>
-					<h3>
-						<strong>Cultural and Social perspectives:</strong>
-					</h3>
-					<ul>
-						<li> Focuses on different forms of art and culture.</li>
-						<li>
-							Creating platform for interested artists and public
-							to participate and grow along with us.
-						</li>
-						<li>
-							Performances, productions and various types of
-							cultural activities.
-						</li>
-						<li>
-							Recognising the achievers, senior artists and giving
-							them to exhibit and educate us their excellences.
-						</li>
-						<li>
-							Encouraging the young talents artists to come
-							forward and take part in our activities.
-						</li>
-						<li>Motivating future generation.</li>
-						<li>Documenting old and useful art and culture.</li>
-						<li>Involving in social activities</li>
-						<li>Creating viewers.</li>
-						<li>Social awareness and commitment.</li>
-					</ul>
-					<h3>
-						<strong>Objectives:</strong>
-					</h3>
-					<ul>
-						<li>
-							To impart, promote and spread education in art,
-							literature, science, commerce, ancient sciences,
-							philosophies and culture of the land.
-						</li>
-						<li>Preserve and protect nature and environment.</li>
-						<li>
-							Short films, theatrical productions, workshops,
-							lectures seminars, Completion, conference.
-						</li>
-						<li>Programs and performances.</li>
-						<li>
-							Cinema, audio-visual programs, artistic
-							performances, cultural activities
-						</li>
-						<li>Youth encouragement programs.</li>
-					</ul>
+					<section>
+						<h3>
+							<strong>Cultural and Social perspectives:</strong>
+						</h3>
+						<ul>
+							<li>
+								{" "}
+								Focuses on different forms of art and culture.
+							</li>
+							<li>
+								Creating platform for interested artists and
+								public to participate and grow along with us.
+							</li>
+							<li>
+								Performances, productions and various types of
+								cultural activities.
+							</li>
+							<li>
+								Recognising the achievers, senior artists and
+								giving them to exhibit and educate us their
+								excellences.
+							</li>
+							<li>
+								Encouraging the young talents artists to come
+								forward and take part in our activities.
+							</li>
+							<li>Motivating future generation.</li>
+							<li>Documenting old and useful art and culture.</li>
+							<li>Involving in social activities</li>
+							<li>Creating viewers.</li>
+							<li>Social awareness and commitment.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>
+							<strong>Objectives:</strong>
+						</h3>
+						<ul>
+							<li>
+								To impart, promote and spread education in art,
+								literature, science, commerce, ancient sciences,
+								philosophies and culture of the land.
+							</li>
+							<li>
+								Preserve and protect nature and environment.
+							</li>
+							<li>
+								Short films, theatrical productions, workshops,
+								lectures seminars, Completion, conference.
+							</li>
+							<li>Programs and performances.</li>
+							<li>
+								Cinema, audio-visual programs, artistic
+								performances, cultural activities
+							</li>
+							<li>Youth encouragement programs.</li>
+						</ul>
+					</section>
+					{/* </div> */}
+
+					{/* <div className="warli-image">
+						<img src="https://svpudupi.org/wp-content/uploads/2020/09/widget1-1.png" />
+						<img src="https://svpudupi.org/wp-content/uploads/2020/09/widget2-1.png" />
+						<img src="https://svpudupi.org/wp-content/uploads/2020/09/widget3-1.png" />
+					</div> */}
 				</div>
 			</section>
-			<Footer />
+			<div className="designs"></div>
+			<Footer color="normal" />
 		</div>
 	);
 }

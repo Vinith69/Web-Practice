@@ -3,8 +3,23 @@ import { NavLink } from "react-router-dom";
 import "./../App.css";
 // import "./Nav.css";
 
-function Nav() {
+function Nav({ color }) {
 	const [isExpanded, setIsExpanded] = useState(true);
+	const [scroll, setScroll] = useState(false);
+
+	const handleScroll = () => {
+		const offset = window.scrollY;
+		// console.log(offset);
+		if (offset > 100) {
+			setScroll(true);
+		} else {
+			setScroll(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+	}, []);
 
 	const handleToggle = () => {
 		setIsExpanded(!isExpanded);
@@ -12,15 +27,19 @@ function Nav() {
 	};
 
 	return (
-		<div className="nav-bar">
-			<h1>Nav bar</h1>
+		<div className={`nav-bar ${scroll && "sticky"} ${color && color} `}>
+			<NavLink to="/" className="nav-logo">
+				<h1>
+					K <span>C</span>
+				</h1>
+			</NavLink>
 			<nav className="nav">
 				<i
 					className="fa fa-bars"
 					aria-hidden="true"
 					onClick={e => handleToggle(e)}
 				/>
-				{console.log(isExpanded)}
+
 				<ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
 					<NavLink activeClassName="active" exact to="/">
 						<li>Home</li>

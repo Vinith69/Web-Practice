@@ -1,9 +1,10 @@
 import React from "react";
+import "../../App.css";
 import { NavLink } from "react-router-dom";
 
 function NotFound() {
 	return (
-		<div>
+		<div className="notFound">
 			<h1>
 				Whoa looks like you're lost... Click on the link below to go to
 				Home Page

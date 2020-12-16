@@ -12,25 +12,41 @@
 	display: flex;
 	flex-direction: column;
 
-	background-color: var(--black);
+	background: url("../banner5.png") repeat-x top;
+	background-size: 20rem;
+	background-position: 9% 0%;
+	/* background-color: var(--black); */
+	background-color: #333;
 	color: white;
 	/* font-family: "roboto", sans-serif; */
 	font-family: "raleway";
 }
 
+.footer.normal {
+	background: none;
+	background-color: #333;
+}
+
 .footer > section {
 	display: flex;
-	justify-content: center;
-	padding: 2rem 2rem;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	/* padding: 2rem 0rem; */
+	padding: 7rem 0 0rem 6rem;
+
 	border-bottom: 0.1px solid rgba(255, 255, 255, 0.158);
 }
 
 .contact-section {
-	width: 20%;
+	/* width: 20%; */
+	width: fit-content;
 	/* text-align: center; */
+	padding: 0 1rem;
+	/* margin-right: 2rem; */
 	display: flex;
 	flex-direction: column;
 }
+
 .contact-section h2 {
 	font-weight: 300;
 }
@@ -43,9 +59,22 @@
 	padding: 1rem 0;
 	line-height: 1.8rem;
 	font-weight: 100;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-section > div > p {
+	margin-bottom: 1rem;
+}
+
+.contact-section > div > a {
+	margin: 0 1rem;
+	color: white;
+	text-decoration: none;
 }
 
 .footer .rights {
+	text-align: center;
 	align-self: center;
 	line-height: 1.8rem;
 	padding-top: 1rem;
@@ -58,4 +87,68 @@
 .footer .rights .my-link > span {
 	font-weight: 600;
 	font-style: oblique;
+}
+
+/* * social media */
+.sociallMedia {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.sociallMedia h2 {
+	font-weight: 500;
+}
+
+.sociallMedia h2 .light {
+	font-weight: 100;
+}
+
+.sociallMedia div i {
+	margin: 0 0 0rem 0.5rem;
+	font-size: 1.2rem;
+}
+
+.sociallMedia div a {
+	width: fit-content;
+	height: min-content;
+	margin: 0 0 0.8rem 0;
+}
+
+/* * social media end */
+
+@media only screen and (max-width: 1500px) {
+	.footer > section {
+		padding: 7rem 0 0 0rem;
+	}
+
+	.contact-section > div {
+		width: 17rem;
+	}
+
+	.sociallMedia div {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.footer > section {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 1rem;
+	}
+
+	.contact-section {
+		padding: 1rem 0;
+		width: auto;
+	}
+
+	.contact-section > div {
+		width: auto;
+	}
+
+	.contact-section > div > a {
+		margin: 0 0rem;
+	}
 }

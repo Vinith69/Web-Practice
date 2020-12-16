@@ -29,32 +29,39 @@ function Programs() {
 
 	return (
 		<div className="programs">
-			<Nav />
-			<div className="video">
+			<Nav color="add" />
+			<div className="prgm-title">
+				<h1>Programs</h1>
+			</div>
+
+			<div className="image">
 				{api.map(file => (
 					<NavLink to={`/programs/${file.id}`} key={file.id}>
 						<div className="image-container">
 							<img
 								src={`/image-page/${file.image}`}
 								width="420"
-								height="350"
+								height="auto"
 								alt="heludilla"
 							/>
-							<h5>{file.title}</h5>
-							<p>
-								{/* Some Paragraph about something and Heludilla
+							{/* Extra div */}
+							<div>
+								<h5>{file.title}</h5>
+								<p>
+									{/* Some Paragraph about something and Heludilla
 							Heludilla because i heludilla. Some Paragraph about
 							something and Heludilla Heludilla because i
 							heludilla Some Paragraph about something and
 							Heludilla Heludilla because i heludilla */}
-								{file.description.substring(0, 70)}......
-							</p>
-							<span>{file.date}</span>
+									{file.description.substring(0, 70)}......
+								</p>
+								<span>{file.date}</span>
+							</div>
 						</div>
 					</NavLink>
 				))}
 			</div>
-			<Footer />
+			<Footer color="normal" />
 		</div>
 	);
 }
