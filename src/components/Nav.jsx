@@ -28,7 +28,7 @@ function Nav({ color }) {
 
 	return (
 		<div className={`nav-bar ${scroll && "sticky"} ${color && color} `}>
-			<NavLink to="/" className="nav-logo">
+			<NavLink to="/" activeClassName="" className="nav-logo">
 				<h1>
 					K <span>C</span>
 				</h1>
@@ -53,7 +53,11 @@ function Nav({ color }) {
 					<NavLink exact activeClassName="active" to="/programs">
 						<li>Programs</li>
 					</NavLink>
-					<NavLink activeClassName="active" to="/contact">
+					<NavLink
+						activeClassName="active notDisplay"
+						className="notDisplay"
+						to="/contact"
+					>
 						<li>Contact</li>
 					</NavLink>
 					{/* <NavLink activeClassName="active" to="/donation">

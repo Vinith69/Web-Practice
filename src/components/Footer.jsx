@@ -6,7 +6,7 @@ function Footer({ color }) {
 	return (
 		<footer className={`footer ${color && "normal"}`}>
 			<section>
-				<div className="contact-section">
+				<div className="contact-section row">
 					<h2>
 						<span>Quick </span>
 						<span className="light">Links</span>
@@ -32,7 +32,7 @@ function Footer({ color }) {
 						<p>Email: dinchakPooja@gmail.com</p>
 					</div>
 				</div>
-				<div className="sociallMedia contact-section">
+				<div className="sociallMedia contact-section row">
 					<h2>
 						<span>Social </span>
 						<span className="light">Media</span>

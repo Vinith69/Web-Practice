@@ -77,7 +77,7 @@
 	text-align: center;
 	align-self: center;
 	line-height: 1.8rem;
-	padding-top: 1rem;
+	padding: 1rem 0;
 }
 
 .footer .rights .my-link {
@@ -116,11 +116,15 @@
 	margin: 0 0 0.8rem 0;
 }
 
+.footer.normal section {
+	padding-top: 2rem;
+}
+
 /* * social media end */
 
 @media only screen and (max-width: 1500px) {
 	.footer > section {
-		padding: 7rem 0 0 0rem;
+		padding: 5rem 0 0 0rem;
 	}
 
 	.contact-section > div {
@@ -140,13 +144,30 @@
 	}
 
 	.contact-section {
-		padding: 1rem 0;
+		padding: 0rem 0 1rem 0;
 		width: auto;
 	}
 
 	.contact-section > div {
 		width: auto;
 	}
+
+	/* !Extra */
+	.contact-section.row > div {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.contact-section.row > div > a {
+		text-align: center;
+		margin-left: 0.5rem;
+	}
+
+	.contact-section.row.sociallMedia > div > a {
+		margin-left: 0rem;
+	}
+
+	/* !Extra */
 
 	.contact-section > div > a {
 		margin: 0 0rem;

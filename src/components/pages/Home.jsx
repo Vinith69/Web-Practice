@@ -112,7 +112,7 @@ function Home() {
 								/>
 								<h5>{file.title}</h5>
 								<p>
-									{file.description.substring(0, 570)}
+									{file.description.substring(0, 500)}
 									......
 								</p>
 								<span>{file.date}</span>

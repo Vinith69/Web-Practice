@@ -187,20 +187,34 @@ nav ul a.active:hover {
 		font-size: 1.9rem;
 	}
 
-	.nav-logo,
+	/* .nav-logo,
 	.nav-logo h1 {
 		max-width: 70px;
+	} */
+
+	.nav-logo {
+		position: relative;
+		top: 0;
+		left: calc(0% + -40%);
 	}
 
 	.nav-bar {
+		position: relative;
 		opacity: 1;
 		padding: 0.8rem 0;
 		height: auto;
 		min-height: 50px;
-		display: block;
+		/* display: block; */
+		display: flex;
+		flex-direction: column;
+
 		/* position: relative; */
 		/* background-color: var(--black); */
 		background-color: var(--navbar);
+	}
+
+	.nav-bar.sticky {
+		position: fixed;
 	}
 
 	nav ul a.active::after {
@@ -254,12 +268,18 @@ nav ul a.active:hover {
 		color: white;
 		opacity: 1;
 		border: none;
+
+		width: 100%;
 	}
 
 	.btn.is-expanded:hover {
 		background-color: white;
 		/* color: rgb(231, 137, 13); */
 		color: var(--high-light);
+	}
+
+	ul.collapsed > .notDisplay > li {
+		display: none;
 	}
 }
 
@@ -317,7 +337,7 @@ nav ul a.active:hover {
 
 	/* background: url("banner1.png") repeat-x; */
 	/* background-size: 11rem; */
-	background-position: 0px 2.5rem;
+	background-position: 0px 0.5rem;
 	/*! changes */
 	/* background-color: var(--black); */
 	color: #fff;
@@ -415,6 +435,7 @@ nav ul a.active:hover {
 		width: 100vw;
 		height: auto;
 		padding-right: 0;
+		padding-top: 0rem;
 	}
 
 	.about-section > .about {
@@ -481,6 +502,7 @@ nav ul a.active:hover {
 .programs-section > .image-section {
 	margin: 1rem 0;
 	display: flex;
+	/* width: min-content; */
 	/* align-items: center; */
 	justify-content: center;
 	flex-wrap: wrap;
