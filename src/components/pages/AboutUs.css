@@ -18,15 +18,15 @@
 
 	background-position: 0px 2.5rem; */
 
-	/* background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
-	0px 2.5rem repeat-x,
-url("../../warli6.png") left 3.5rem no-repeat,
-url("../../warli3.png") right 1.5rem no-repeat,
-url("../../warli7.png") left 30rem no-repeat,
-url("../../warli5.png") right 30rem no-repeat,
-url("../../warli2.png") left 56rem no-repeat,
-url("../../warli1.png") right 60rem no-repeat; */
-
+	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
+			0px 2.5rem repeat-x,
+		url("../../warli6.png") left 3.5rem no-repeat,
+		url("../../warli3.png") right 1.5rem no-repeat,
+		url("../../warli7.png") left 30rem no-repeat,
+		url("../../warli5.png") right 30rem no-repeat,
+		url("../../warli2.png") left 56rem no-repeat,
+		url("../../warli1.png") right 60rem no-repeat;
+	/* 
 	background: url("http://svpudupi.org/wp-content/themes/business-trade/assets/images/border2.png")
 			0px 2.5rem repeat-x,
 		url("../../warli6.png") left 3.5rem no-repeat,
@@ -34,7 +34,7 @@ url("../../warli1.png") right 60rem no-repeat; */
 		url("../../warlicolor2.png") left 30rem no-repeat,
 		url("../../warli5.png") right 30rem no-repeat,
 		url("../../warli2.png") left 56rem no-repeat,
-		url("../../warli1.png") right 60rem no-repeat;
+		url("../../warli1.png") right 60rem no-repeat; */
 	background-size: 5rem, 26rem, 25rem, 25rem, 30rem, 35rem, 25rem;
 	/* background-position: 0px 2.5rem, right 1.5rem, -4rem 1.5rem, -2rem, right; */
 

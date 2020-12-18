@@ -57,7 +57,7 @@ function Home() {
 					className="carousel"
 				>
 					<img
-						className="slidermig"
+						className="sliderimg"
 						alt=""
 						src="https://cdn.shopify.com/s/files/1/1969/3881/products/8_Dancers_Who_Shaped_Indian_Classical_Dance_As_We_Know_It_Today_7ef605fc8dba5425d6965fbd4c8fbe1f_1024x1024.jpg?v=1510119583"
 					/>
