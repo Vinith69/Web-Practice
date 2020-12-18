@@ -27,13 +27,14 @@ function Home() {
 			});
 		};
 		fetchData();
-
+		setTimeout(() => {}, 5000);
 		AOS.init({ duration: 2000 });
 	}, []);
 
 	return (
 		<div className="Home">
 			<Nav />
+
 			{/* <h1>Home Component</h1> */}
 			<div className="image-slider">
 				{/* <img src={`/images/${slideImages[0]}`} alt="fuck" /> */}
@@ -49,8 +50,8 @@ function Home() {
 
 				<AliceCarousel
 					disableButtonsControls={true}
-					autoHeight
-					// autoPlay
+					// autoHeight
+					autoPlay
 					autoPlayInterval="2000"
 					infinite={true}
 					className="carousel"
