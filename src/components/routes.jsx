@@ -25,6 +25,7 @@ function routes() {
 				<Route path="/programs/:image" component={ProgramInfo} />
 				<Route exact path="/programs" component={Programs} />
 				<Route path="/videos" component={VideoPlayer} />
+				<Route exact path="/Web-Practice" component={Home} />
 				<Route exact path="/" component={Home} />
 				<Route component={NotFound} />
 			</Switch>
