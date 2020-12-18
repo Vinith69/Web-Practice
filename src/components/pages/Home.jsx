@@ -10,6 +10,8 @@ import "aos/dist/aos.css";
 import logo from "../../logo1.png";
 import { NavLink } from "react-router-dom";
 import Footer from "../Footer";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 // import useWindowDimensions from "./../useWindowDimensions";
 
 function Home() {
@@ -45,7 +47,42 @@ function Home() {
 				</h1>
 				{/* <img src="/images/front.jpg" alt="" /> */}
 
-				<img src="https://cdn.shopify.com/s/files/1/1969/3881/products/8_Dancers_Who_Shaped_Indian_Classical_Dance_As_We_Know_It_Today_7ef605fc8dba5425d6965fbd4c8fbe1f_1024x1024.jpg?v=1510119583" />
+				<AliceCarousel
+					disableButtonsControls={true}
+					autoHeight
+					autoPlay
+					autoPlayInterval="2000"
+					infinite={true}
+					className="carousel"
+				>
+					<img
+						className="slidermig"
+						alt=""
+						src="https://cdn.shopify.com/s/files/1/1969/3881/products/8_Dancers_Who_Shaped_Indian_Classical_Dance_As_We_Know_It_Today_7ef605fc8dba5425d6965fbd4c8fbe1f_1024x1024.jpg?v=1510119583"
+					/>
+					<img
+						src="https://svpudupi.org/wp-content/uploads/2020/09/slide3.jpg"
+						className="sliderimg"
+						alt=""
+					/>
+					<img
+						src="http://svpudupi.org/wp-content/uploads/2020/09/slide1.jpg"
+						className="sliderimg"
+						alt=""
+					/>
+					<img
+						src="http://svpudupi.org/wp-content/uploads/2020/09/slide4.jpg"
+						className="sliderimg"
+						alt=""
+					/>
+					<img
+						src="http://svpudupi.org/wp-content/uploads/2020/09/slide5.jpg"
+						className="sliderimg"
+						alt=""
+					/>
+				</AliceCarousel>
+
+				{/* <img src="https://cdn.shopify.com/s/files/1/1969/3881/products/8_Dancers_Who_Shaped_Indian_Classical_Dance_As_We_Know_It_Today_7ef605fc8dba5425d6965fbd4c8fbe1f_1024x1024.jpg?v=1510119583" /> */}
 			</div>
 			<section className="about-section">
 				<div
