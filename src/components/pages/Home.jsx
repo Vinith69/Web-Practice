@@ -50,7 +50,7 @@ function Home() {
 				<AliceCarousel
 					disableButtonsControls={true}
 					autoHeight
-					autoPlay
+					// autoPlay
 					autoPlayInterval="2000"
 					infinite={true}
 					className="carousel"
