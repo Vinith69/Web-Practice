@@ -28,10 +28,12 @@ function VideoPlayer() {
 	// ];
 	// console.log(api.map((l)));
 	useEffect(() => {
-		const fetchData = () => {
+		const fetchData = async () => {
 			setIsLoading(true);
-			const url = `http://localhost:5000/addLinks`;
-			Axios.get(url).then(response => {
+			// const url = `http://localhost:5000/addLinks`;
+			const url = `http://localhost/phpKc/addLinks.php`;
+
+			await Axios.get(url).then(response => {
 				console.log(response);
 				setApi(response.data);
 			});

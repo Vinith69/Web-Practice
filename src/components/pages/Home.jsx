@@ -20,7 +20,9 @@ function Home() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const url = `http://localhost:5000/homeProgramImage`;
+			// const url = `http://localhost:5000/homeProgramImage`;
+			const url = `http://localhost/phpKc/homeProgramImage.php`;
+
 			await Axios.get(url).then(response => {
 				console.log(response);
 				setApi(response.data);

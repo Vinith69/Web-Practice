@@ -15,7 +15,8 @@ function AddImage() {
 		e.stopPropagation();
 		// console.log(e);
 		setIsDisabled(true);
-		const url = "http://localhost:5000/addImage";
+		// const url = "http://localhost:5000/addImage";
+		const url = "http://localhost/phpKc/addImage.php";
 		let formdata = new FormData();
 
 		formdata.append("myFile", image);

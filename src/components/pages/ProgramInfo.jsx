@@ -13,7 +13,8 @@ function ProgramInfo() {
 	useEffect(() => {
 		const fetchData = async () => {
 			setIsLoading(true);
-			const url = `http://localhost:5000/specificImage`;
+			// const url = `http://localhost/specificImage`;
+			const url = `http://localhost/phpKc/specificImage.php`;
 			await Axios.get(url, { params: { id: image } }).then(response => {
 				// console.log(response.data);
 				// console.log(image);
