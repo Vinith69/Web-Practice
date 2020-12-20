@@ -19,7 +19,9 @@ function Programs() {
 	useEffect(() => {
 		const fetchData = () => {
 			// const url = `http://localhost:5000/addImage`;
-			const url = `http://localhost/phpKc/addImage.php`;
+			// const url = `http://localhost/phpKc/addImage.php`;
+			const url = `https://heludilla.000webhostapp.com/backend/addImage.php`;
+
 			Axios.get(url).then(response => {
 				// console.log(response);
 				setApi(response.data);

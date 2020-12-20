@@ -11,7 +11,9 @@ function AddLinks() {
 
 	const handleSubmit = async () => {
 		setIsDisabled(true);
-		const url = "http://localhost:5000/addLinks";
+		// const url = "http://localhost:5000/addLinks";
+		const url = "https://heludilla.000webhostapp.com/backend/addLinks.php";
+
 		await Axios.post(url, {
 			link: link,
 			title: title,

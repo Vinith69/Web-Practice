@@ -31,7 +31,9 @@ function VideoPlayer() {
 		const fetchData = async () => {
 			setIsLoading(true);
 			// const url = `http://localhost:5000/addLinks`;
-			const url = `http://localhost/phpKc/addLinks.php`;
+			// const url = `http://localhost/phpKc/addLinks.php`;
+			const url =
+				"https://heludilla.000webhostapp.com/backend/addLinks.php";
 
 			await Axios.get(url).then(response => {
 				console.log(response);

@@ -14,7 +14,9 @@ function ProgramInfo() {
 		const fetchData = async () => {
 			setIsLoading(true);
 			// const url = `http://localhost/specificImage`;
-			const url = `http://localhost/phpKc/specificImage.php`;
+			// const url = `http://localhost/phpKc/specificImage.php`;
+			const url = `https://heludilla.000webhostapp.com/backend/specificImage.php`;
+
 			await Axios.get(url, { params: { id: image } }).then(response => {
 				// console.log(response.data);
 				// console.log(image);

@@ -21,7 +21,8 @@ function Home() {
 	useEffect(() => {
 		const fetchData = async () => {
 			// const url = `http://localhost:5000/homeProgramImage`;
-			const url = `http://localhost/phpKc/homeProgramImage.php`;
+			// const url = `http://localhost/phpKc/homeProgramImage.php`;
+			const url = `https://heludilla.000webhostapp.com/backend/homeProgramImage.php`;
 
 			await Axios.get(url).then(response => {
 				console.log(response);
